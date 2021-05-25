@@ -20,11 +20,36 @@ ON
 
 --Which warehouses have cheetos?
 
+SELECT * FROM "products"
+JOIN
+"warehouse_product"
+ON
+"products"."id" = "warehouse_product"."product_id"
+JOIN
+"warehouse"
+ON
+"warehouse"."id" = "warehouse_product"."warehouse_id"
+WHERE "products"."description" = 'cheetos';
+
 
 --Which warehouses have diet pepsi?
+NONE
+
+SELECT * FROM "products"
+JOIN
+"warehouse_product"
+ON
+"products"."id" = "warehouse_product"."product_id"
+JOIN
+"warehouse"
+ON
+"warehouse"."id" = "warehouse_product"."warehouse_id"
+WHERE "products"."description" = 'diet pepsi';
 
 
 --Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
+
+
 
 
 --How many customers do we have?
